@@ -1,10 +1,11 @@
-import 'package:challenge2/Screens/auth/login_screen.dart';
-
-import 'widgets/build_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'widgets/build_button.dart';
+
+import 'login_screen.dart';
+import 'register_screen.dart';
 import '../../constants.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -107,8 +108,12 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 12),
-                  // this line doesn't read my buildButton method
-                  // buildButton('text'),
+                  buildButton(
+                    'Create an account',
+                    iconPath: 'assets/icons/person.svg',
+                    onPressed: () => Navigator.of(context)
+                        .pushNamed(RegisterScreen.routeName),
+                  ),
                   const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
