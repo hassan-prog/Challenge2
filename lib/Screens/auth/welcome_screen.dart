@@ -107,6 +107,7 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 12),
+                  // this line doesn't read my buildButton method
                   // buildButton('text'),
                   const SizedBox(height: 20),
                   Row(
